@@ -16,7 +16,7 @@ class ProductCrud(APIView):
         PDO=ProductModelSerializer(data=JDO)
         if PDO.is_valid():
             PDO.save()
-            return Response({'Insert':'Data is inserted Successfully'})
+            return Response({'Insert':'Data is inserted Successfully'})   #Error-Single quote,','
         else:
-            return Response({'Error':'Data is not inserted'})   #Error-Single quote,','
+            return Response({'Error':'Data is not inserted'})   
         
